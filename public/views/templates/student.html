@@ -1,0 +1,99 @@
+<div class="twelve columns">
+    <form name="form" role="form" class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="firstName">Enter First Name: </label>
+            <div class="col-sm-9">
+                <input class="form-control" type="text" id="firstName" name="firstName" ng-model="first_name" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="lastName">Enter Last Name: </label>
+            <div class="col-sm-9">
+                <input class="form-control" type="text" id="lastName" name="lastName" ng-model="last_name" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="emailAddress">Email Address: </label>
+            <div class="col-sm-9">
+                <input class="form-control" type="text" id="emailAddress" name="emailAddress" ng-model="email_address" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="cohortName">Select Cohort: </label>
+            <div class="col-sm-9">
+                <select class="form-control" id="cohortName" name="cohortName" ng-model="cohort_name">
+                <option value="beta">Beta</option>
+                <option value="gamma">Gamma</option>
+                <option value="delta">Delta</option>
+                <option value="epsilon">Epsilon</option>
+                <option value="zeta">Zeta</option>
+                <option value="eta">Eta</option>
+                <option value="theta">Theta</option>
+                <option value="iota">Iota</option>
+                <option value="kappa">Kappa</option>
+                <option value="lambda">Lambda</option>
+            </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="projectName">Enter Project Name: </label>
+            <div class="col-sm-9">
+                <input class="form-control" type="text" id="projectName" name="projectName" ng-model="project_name" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="projectDescription">Enter Project Description: </label>
+            <div class="col-sm-9">
+                <input class="form-control" type="text" id="projectDescription" name="projectDescription" ng-model="project_description" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="techUsed">Select Technologies Used: </label>
+            <div class="col-sm-9">
+                <select class="form-control" id="techUsed" name="techUsed" ng-model="tech_used">
+                    <option value="angular">AngularJS</option>
+                    <option value="jquery">JQuery</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="nodejs">NodeJS</option>
+                    <option value="mongodb">MongoDB</option>
+                    <option value="sql">SQL</option>
+                    <option value="express">Express</option>
+                    <option value="handlebars">Handlebars</option>
+                    <option value="jade">Jade</option>
+                    <option value="sass">SASS</option>
+                    <option value="bootstrap">Bootstrap</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="projectURL">Enter Project URL: </label>
+            <div class="col-sm-9">
+                <input class="form-control" type="text" id="projectURL" name="projectURL" ng-model="project_url" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="linkedinURL">Enter Linkedin URL: </label>
+            <div class="col-sm-9">
+                <input class="form-control" type="text" id="linkedinURL" name="linkedinURL" ng-model="linkedin_url" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="githubURL">Enter Github URL: </label>
+            <div class="col-sm-9">
+                <input class="form-control" type="text" id="githubURL" name="githubURL" ng-model="github_url" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="file">Select Image: </label>
+            <div class="col-sm-9">
+                <div class="btn btn-default" ngf-select id="file" name="file" ng-model="file">Select</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-default" ng-click="saveStudent()">Submit</button>
+        </div>
+
+        </div>
+    </form>
+</div>

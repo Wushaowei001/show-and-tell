@@ -1,0 +1,20 @@
+<div class="twelve columns">
+    <div class="four columns">
+        <img src="{{project.file}}" alt="project image">
+        <h6>{{project.project_url}}</h6>
+    </div>
+    <div class="four columns">
+        <h5>{{project.project_name}}</h5>
+        <p>{{project.project_description}}</p>
+    </div>
+    <div class="four columns">
+        <h5>Author</h5>
+        <p>{{project.first_name}} {{project.last_name}}</p>
+        <p><a href="{{project.linkedin_url}}">Linkedin URL</a></p>
+        <p><a href="{{project.github_url}}">Github URL</a></p>
+        <h5>Technologies Used</h5>
+        <p>{{project.tech_used}}</p>
+    </div>
+</div>
+
+<!-- populate page with data from $scope.project -->

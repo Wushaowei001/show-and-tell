@@ -1,0 +1,119 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-2 sidebar">
+            <h4>Random Projects</h4>
+            <h5>Project Title</h5>
+            <p>Project descriptive paragraph goes here.</p>
+            <p><a href="#project">link</a></p>
+            <h5>Project Title</h5>
+            <p>Project descriptive paragraph goes here.</p>
+            <p><a href="#project">link</a></p>
+            <h5>Project Title</h5>
+            <p>Project descriptive paragraph goes here.</p>
+            <p><a href="#project">link</a></p>
+            <h5>Project Title</h5>
+            <p>Project descriptive paragraph goes here.</p>
+            <p><a href="#project">link</a></p>
+            <h5>Project Title</h5>
+            <p>Project descriptive paragraph goes here.</p>
+            <p><a href="#project">link</a></p>
+        </div>
+        <div class="col-md-10">
+            <div id="grid" data-columns>
+                <div class="column size-1of3 panel panel-primary img-container">
+                    <div>
+                        <div class="panel-body"><img id="theImage" src="/views/templates/file-1457636740745.jpg"></div>
+                        <div class="panel-heading">Panel heading without title</div>
+                    </div>
+                    <div>
+                        <div class="panel-body"><img id="theImage" src="/views/templates/file-1457563934358.jpg"></div>
+                        <div class="panel-heading">Panel heading without title</div>
+                    </div>
+                    <div>
+                        <div class="panel-body"><img id="theImage" src="/views/templates/file-1457564163097.jpg"></div>
+                        <div class="panel-heading">Panel heading without title</div>
+                    </div>
+                </div>
+                <div class="column size-1of3 panel panel-primary img-container">
+                    <div>
+                        <div class="panel-body"><img id="theImage" src="/views/templates/file-1457563934358.jpg"></div>
+                        <div class="panel-heading">Panel heading without title</div>
+                    </div>
+                    <div>
+                        <div class="panel-body"><img id="theImage" src="/views/templates/file-1457564163097.jpg"></div>
+                        <div class="panel-heading">Panel heading without title</div>
+                    </div>
+                    <div>
+                        <div class="panel-body"><img id="theImage" src="/views/templates/file-1457636740745.jpg"></div>
+                        <div class="panel-heading">Panel heading without title</div>
+                    </div>
+                </div>
+                <div class="column size-1of3 panel panel-primary img-container">
+                    <div>
+                        <div class="panel-body"><img id="theImage" src="/views/templates/file-1457564163097.jpg"></div>
+                        <div class="panel-heading">Panel heading without title</div>
+                    </div>
+                    <div>
+                        <div class="panel-body"><img id="theImage" src="/views/templates/file-1457636740745.jpg"></div>
+                        <div class="panel-heading">Panel heading without title</div>
+                    </div>
+                    <div>
+                        <div class="panel-body"><img id="theImage" src="/views/templates/file-1457563934358.jpg"></div>
+                        <div class="panel-heading">Panel heading without title</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1>Students</h1>
+    <div ng-repeat="student in students">
+        <p><img ng-src="/uploads/{{student.file_url}}"></p>
+        <p>{{student.project_description}}</p>
+    </div>
+
+
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script>
+        function append(title, content) {
+            var grid = document.querySelector('#columns');
+            var item = document.createElement('div');
+            var h = '<div class="panel panel-primary">';
+            h += '<div class="panel-heading">';
+            h += title;
+            h += '</div>';
+            h += '<div class="panel-body">';
+            h += content;
+            h += '</div>';
+            h += '</div>';
+            salvattore['append_elements'](grid, [item]) item.outerHTML = h;
+        }
+        $.getJSON("https://www.googleapis.com/books/v1/volumes?q=inauthor:Ernest+Hemingway&callback=?", function (data) {
+            $(data.items).each(function (i, book) {
+                append(book.volumeInfo.title, book.volumeInfo.description);
+            });
+        });
+    </script>
+
+
+</div>
+
+<!--<div class="col-md-3 img-container">-->
+<!--<div>-->
+<!--<img id="theImage" src="/views/templates/file-1457563934358.jpg">-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-md-3 img-container">-->
+<!--<div>-->
+<!--<img id="theImage" src="/views/templates/file-1457563934358.jpg">-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-md-3 img-container">-->
+<!--<div>-->
+<!--<img id="theImage" src="/views/templates/file-1457563934358.jpg">-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div class="container">-->
