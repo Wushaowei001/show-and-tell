@@ -1,19 +1,19 @@
-<div class="twelve columns">
-    <div class="four columns">
-        <img src="{{project.file}}" alt="project image">
-        <h6>{{project.project_url}}</h6>
+<div class="col-md-12 main" ng-repeat="student in students">
+    <div class="col-md-4">
+        <img class="img-container" ng-src="/uploads/{{ student.file_url }}" alt="Project image">
+        <h6>{{student.project_url}}</h6>
     </div>
-    <div class="four columns">
-        <h5>{{project.project_name}}</h5>
-        <p>{{project.project_description}}</p>
+    <div class="col-md-4">
+        <h5>{{student.project_name}}</h5>
+        <p>{{student.project_description}}</p>
     </div>
-    <div class="four columns">
+    <div class="col-md-4">
         <h5>Author</h5>
-        <p>{{project.first_name}} {{project.last_name}}</p>
-        <p><a href="{{project.linkedin_url}}">Linkedin URL</a></p>
-        <p><a href="{{project.github_url}}">Github URL</a></p>
+        <p>{{student.first_name}} {{student.last_name}}</p>
+        <p><a href="{{student.linkedin_url}}">Linkedin URL</a></p>
+        <p><a href="{{student.github_url}}">Github URL</a></p>
         <h5>Technologies Used</h5>
-        <p>{{project.tech_used}}</p>
+        <p>{{student.tech_used}}</p>
     </div>
 </div>
 

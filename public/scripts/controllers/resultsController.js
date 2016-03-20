@@ -1,5 +1,11 @@
 myApp.controller('ResultsController', ['$scope', '$http', 'Upload', function($scope, $http, Upload) {
 
+    $scope.bricks = ['/views/templates/file-1457563934358.jpg',
+        'Images/Christina Ysaguirre Photography Copyright 2015 (3).jpg',
+        'Images/Christina Ysaguirre Photography Copyright 2015 (4).jpg',
+        'Images/Christina Ysaguirre Photography Copyright 2015 (5).jpg'
+    ];
+
     //$scope.results = [
     //    {
     //

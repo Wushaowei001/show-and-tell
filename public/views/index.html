@@ -6,11 +6,25 @@
     <link rel="stylesheet" href="./vendors/bootstrap.min.css" />
     <link rel="stylesheet" href="./styles/stylesheet.css" />
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+    <!-- Angular Masonry test - jquery first -->
+    <script type="text/javascript" src="./vendors/jquery.js"></script>
+    <script type="text/javascript" src="./vendors/jquery-bridget.js"></script>
+    <script type="text/javascript" src="./vendors/bootstrap.min.js"></script>
     <!-- Angular -->
     <script type="text/javascript" src="./vendors/angular.min.js"></script>
     <script type="text/javascript" src="./vendors/angular-route.min.js"></script>
     <!-- Masonry CSS -->
     <script type="text/javascript" src="./vendors/salvattore.min.js"></script>
+    <!-- Angular Masonry test -->
+    <script type="text/javascript" src="./vendors/ev-emitter.js"></script>
+    <script type="text/javascript" src="./vendors/matches-selector.js"></script>
+    <script type="text/javascript" src="./vendors/utils.js"></script>
+    <script type="text/javascript" src="./vendors/get-size.js"></script>
+    <script type="text/javascript" src="./vendors/item.js"></script>
+    <script type="text/javascript" src="./vendors/outlayer.js"></script>
+    <script type="text/javascript" src="./vendors/masonry.js"></script>
+    <script type="text/javascript" src="./vendors/imagesloaded.js"></script>
+    <script type="text/javascript" src="./vendors/angular-masonry.js"></script>
 
     <script type="text/javascript" src="./vendors/ng-file-upload.min.js"></script>
     <script type="text/javascript" src="./vendors/ng-file-upload-shim.min.js"></script>
@@ -19,26 +33,21 @@
     <script type="text/javascript" src="./scripts/controllers/projectController.js"></script>
     <script type="text/javascript" src="./scripts/controllers/resultsController.js"></script>
     <script type="text/javascript" src="./scripts/controllers/homeController.js"></script>
+
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <!-- the header.html file has the login link and search bar across the top row, then the logo and filter links across the next row -->
-                <div ng-include="'./templates/header.html'" class="header">
-
-                </div>
+        <div class="row-fluid">
+            <!-- the header.html file has the login link and search bar across the top row, then the logo and filter links across the next row -->
+            <div ng-include="'./templates/header.html'">
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12 main">
-                <!-- does anything dynamic need to go into the ng-view div? the filter nav for instance? -->
-                <div ng-view>
+        <div class="row-fluid">
+            <!-- does anything dynamic need to go into the ng-view div? the filter nav for instance? -->
+            <div ng-view>
 
-                </div>
             </div>
         </div>
-
     </div>
 </body>
 </html>
