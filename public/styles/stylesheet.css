@@ -88,20 +88,22 @@ a .visited {
     /*background-image:none;*/
 /*}*/
 
-/* modal styles */
-.modal-body .form-horizontal .col-sm-2,
-.modal-body .form-horizontal .col-sm-10 {
-    width: 100%
-}
+/*!* bootstrap modal styles *!*/
+/*.modal-body .form-horizontal .col-sm-2,*/
+/*.modal-body .form-horizontal .col-sm-10 {*/
+    /*width: 100%*/
+/*}*/
 
-.modal-body .form-horizontal .control-label {
-    text-align: left;
-}
-.modal-body .form-horizontal .col-sm-offset-2 {
-    margin-left: 15px;
-}
+/*.modal-body .form-horizontal .control-label {*/
+    /*text-align: left;*/
+/*}*/
+/*.modal-body .form-horizontal .col-sm-offset-2 {*/
+    /*margin-left: 15px;*/
+/*}*/
 
-
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
 
 .masonry-brick {
     margin: 1em;

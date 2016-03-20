@@ -2,19 +2,20 @@
 <html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Show and Tell</title>
-    <link rel="stylesheet" href="./vendors/bootstrap.min.css" />
+    <link rel="stylesheet" href="./vendors/angular-material.css" />
     <link rel="stylesheet" href="./styles/stylesheet.css" />
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
     <!-- Angular Masonry test - jquery first -->
     <script type="text/javascript" src="./vendors/jquery.js"></script>
     <script type="text/javascript" src="./vendors/jquery-bridget.js"></script>
-    <script type="text/javascript" src="./vendors/bootstrap.min.js"></script>
     <!-- Angular -->
     <script type="text/javascript" src="./vendors/angular.min.js"></script>
     <script type="text/javascript" src="./vendors/angular-route.min.js"></script>
-    <!-- Masonry CSS -->
-    <script type="text/javascript" src="./vendors/salvattore.min.js"></script>
+    <script type="text/javascript" src="./vendors/angular-animate.min.js"></script>
+    <script type="text/javascript" src="./vendors/angular-aria.js"></script>
+    <script type="text/javascript" src="./vendors/angular-material.js"></script>
     <!-- Angular Masonry test -->
     <script type="text/javascript" src="./vendors/ev-emitter.js"></script>
     <script type="text/javascript" src="./vendors/matches-selector.js"></script>
@@ -35,19 +36,60 @@
     <script type="text/javascript" src="./scripts/controllers/homeController.js"></script>
 
 </head>
-<body>
-    <div class="container">
-        <div class="row-fluid">
-            <!-- the header.html file has the login link and search bar across the top row, then the logo and filter links across the next row -->
-            <div ng-include="'./templates/header.html'">
-            </div>
-        </div>
-        <div class="row-fluid">
-            <!-- does anything dynamic need to go into the ng-view div? the filter nav for instance? -->
-            <div ng-view>
+<body ng-cloak layout="column">
+    <!--<md-toolbar layout="row" ng-include="'./templates/header.html'">-->
 
-            </div>
-        </div>
+    <!--</md-toolbar>-->
+
+        <!--<div flex layout="row">-->
+            <!--<md-content flex id="content" ng-view>-->
+
+            <!--</md-content>-->
+        <!--</div>-->
+
+    <!-- Container #1 (see wireframe) -->
+    <md-toolbar layout="row" ng-include="'./templates/header.html'">
+
+    </md-toolbar>
+
+    <!-- Container #2 -->
+    <div flex layout="row">
+
+        <!-- Container #3 -->
+        <md-sidenav md-is-locked-open="true" class="md-whiteframe-z2"></md-sidenav>
+
+        <!-- Container #4 -->
+        <md-content flex id="content"></md-content>
+
     </div>
+
+    <script>
+        angular.module('myApp', ['ngMaterial'])
+        .config(function($mdThemingProvider){
+            $mdThemingProvider.definePalette('amazingPaletteName', {
+                '50': 'ffebee',
+                '100': 'ffcdd2',
+                '200': 'ef9a9a',
+                '300': 'e57373',
+                '400': 'ef5350',
+                '500': 'f44336',
+                '600': 'e53935',
+                '700': 'd32f2f',
+                '800': 'c62828',
+                '900': 'b71c1c',
+                'A100': 'ff8a80',
+                'A200': 'ff5252',
+                'A400': 'ff1744',
+                'A700': 'd50000',
+                'contrastDefaultColor': 'light',    // whether, by default, text (contrast)
+                                                    // on this palette should be dark or light
+                'contrastDarkColors': ['50', '100', //hues which contrast should be 'dark' by default
+                    '200', '300', '400', 'A100'],
+                'contrastLightColors': undefined    // could also specify this if default was 'dark'
+            });
+            $mdThemingProvider.theme('default')
+                    .primaryPalette('amazingPaletteName')
+        });
+    </script>
 </body>
 </html>
