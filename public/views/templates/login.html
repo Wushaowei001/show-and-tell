@@ -1,0 +1,59 @@
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Student Login/Register</h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-12 main">
+                    <form name="form" role="form" class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="emailAddress">Email Address: </label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="text" id="emailAddress" name="emailAddress" ng-model="email_address" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="password">Password: </label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="text" id="password" name="password" ng-model="password" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="remember">Checkbox Remember Me </label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="text" id="remember" name="remember" ng-model="remember" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <div class="col-sm-9">
+                                <button type="button" class="btn btn-default"><a href="#/student">Sign In</a></button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="projectName"><a href="#">Forgot your password?</a></label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="text" id="projectName" name="projectName" ng-model="project_name" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="projectDescription">Not registered yet? Sign up here. </label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="text" id="projectDescription" name="projectDescription" ng-model="project_description" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-default"><a href="#/student">Sign up</a></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <!--<button type="button" class="btn btn-primary" ng-click="saveStudent()">Submit</button>-->
+            </div>
+        </div>
+    </div>
+</div>

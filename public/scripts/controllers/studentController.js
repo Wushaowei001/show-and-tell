@@ -16,9 +16,27 @@ myApp.controller('StudentController', ['$scope', '$http', 'Upload', function($sc
     $scope.students = [];
 
 
-    //ajax call to server. poplulate students array. load all students on page load
+    //hide student form until modal sign up button is clicked
+    //there's an ng-show in the student.html
+    //and an ng-click in the header.html
+    $scope.showForm = false;
+
+    $scope.showForm = function () {
+        $scope.showForm = true;
+    }
+
+    //$scope.bricks = ['/views/templates/file-1457563934358.jpg',
+    //    '/views/templates/file-1457563934358.jpg',
+    //    '/views/templates/file-1457563934358.jpg',
+    //    '/views/templates/file-1457563934358.jpg'
+    //];
+
+
+    //ajax call to server. populate students array. load all students on page load
     $http.get('/student').then(function(response) {
         $scope.students = response.data; //updates the DOM
+
+
     });
 
 
@@ -38,7 +56,6 @@ myApp.controller('StudentController', ['$scope', '$http', 'Upload', function($sc
                 linkedinURL: $scope.linkedin_url,
                 githubURL: $scope.github_url,
                 file: $scope.file
-                //imageUpload: $scope.file
             }
         }).then(function (response) {
             console.log("Success");

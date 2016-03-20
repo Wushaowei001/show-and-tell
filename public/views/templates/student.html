@@ -1,99 +1,153 @@
-<div class="twelve columns">
-    <form name="form" role="form" class="form-horizontal">
-        <div class="form-group">
-            <label class="control-label col-sm-3" for="firstName">Enter First Name: </label>
-            <div class="col-sm-9">
-                <input class="form-control" type="text" id="firstName" name="firstName" ng-model="first_name" />
+    <div class="col-md-12 main" ng-show="showForm">
+        <form name="form" role="form" class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="firstName">Enter First Name: </label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" id="firstName" name="firstName" ng-model="first_name" />
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-sm-3" for="lastName">Enter Last Name: </label>
-            <div class="col-sm-9">
-                <input class="form-control" type="text" id="lastName" name="lastName" ng-model="last_name" />
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="lastName">Enter Last Name: </label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" id="lastName" name="lastName" ng-model="last_name" />
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-sm-3" for="emailAddress">Email Address: </label>
-            <div class="col-sm-9">
-                <input class="form-control" type="text" id="emailAddress" name="emailAddress" ng-model="email_address" />
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="emailAddress">Email Address: </label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" id="emailAddress" name="emailAddress" ng-model="email_address" />
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-sm-3" for="cohortName">Select Cohort: </label>
-            <div class="col-sm-9">
-                <select class="form-control" id="cohortName" name="cohortName" ng-model="cohort_name">
-                <option value="beta">Beta</option>
-                <option value="gamma">Gamma</option>
-                <option value="delta">Delta</option>
-                <option value="epsilon">Epsilon</option>
-                <option value="zeta">Zeta</option>
-                <option value="eta">Eta</option>
-                <option value="theta">Theta</option>
-                <option value="iota">Iota</option>
-                <option value="kappa">Kappa</option>
-                <option value="lambda">Lambda</option>
-            </select>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-sm-3" for="projectName">Enter Project Name: </label>
-            <div class="col-sm-9">
-                <input class="form-control" type="text" id="projectName" name="projectName" ng-model="project_name" />
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-sm-3" for="projectDescription">Enter Project Description: </label>
-            <div class="col-sm-9">
-                <input class="form-control" type="text" id="projectDescription" name="projectDescription" ng-model="project_description" />
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-sm-3" for="techUsed">Select Technologies Used: </label>
-            <div class="col-sm-9">
-                <select class="form-control" id="techUsed" name="techUsed" ng-model="tech_used">
-                    <option value="angular">AngularJS</option>
-                    <option value="jquery">JQuery</option>
-                    <option value="javascript">JavaScript</option>
-                    <option value="nodejs">NodeJS</option>
-                    <option value="mongodb">MongoDB</option>
-                    <option value="sql">SQL</option>
-                    <option value="express">Express</option>
-                    <option value="handlebars">Handlebars</option>
-                    <option value="jade">Jade</option>
-                    <option value="sass">SASS</option>
-                    <option value="bootstrap">Bootstrap</option>
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="cohortName">Select Cohort: </label>
+                <div class="col-sm-9">
+                    <select class="form-control" id="cohortName" name="cohortName" ng-model="cohort_name">
+                    <option value="beta">Beta</option>
+                    <option value="gamma">Gamma</option>
+                    <option value="delta">Delta</option>
+                    <option value="epsilon">Epsilon</option>
+                    <option value="zeta">Zeta</option>
+                    <option value="eta">Eta</option>
+                    <option value="theta">Theta</option>
+                    <option value="iota">Iota</option>
+                    <option value="kappa">Kappa</option>
+                    <option value="lambda">Lambda</option>
                 </select>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-sm-3" for="projectURL">Enter Project URL: </label>
-            <div class="col-sm-9">
-                <input class="form-control" type="text" id="projectURL" name="projectURL" ng-model="project_url" />
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="projectName">Enter Project Name: </label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" id="projectName" name="projectName" ng-model="project_name" />
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-sm-3" for="linkedinURL">Enter Linkedin URL: </label>
-            <div class="col-sm-9">
-                <input class="form-control" type="text" id="linkedinURL" name="linkedinURL" ng-model="linkedin_url" />
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="projectDescription">Enter Project Description: </label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" id="projectDescription" name="projectDescription" ng-model="project_description" />
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-sm-3" for="githubURL">Enter Github URL: </label>
-            <div class="col-sm-9">
-                <input class="form-control" type="text" id="githubURL" name="githubURL" ng-model="github_url" />
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="techUsed">Select Technologies Used: </label>
+                <div class="col-sm-9">
+                    <select class="form-control" id="techUsed" name="techUsed" ng-model="tech_used">
+                        <option value="angular">AngularJS</option>
+                        <option value="jquery">JQuery</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="nodejs">NodeJS</option>
+                        <option value="mongodb">MongoDB</option>
+                        <option value="sql">SQL</option>
+                        <option value="express">Express</option>
+                        <option value="handlebars">Handlebars</option>
+                        <option value="jade">Jade</option>
+                        <option value="sass">SASS</option>
+                        <option value="bootstrap">Bootstrap</option>
+                    </select>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-sm-3" for="file">Select Image: </label>
-            <div class="col-sm-9">
-                <div class="btn btn-default" ngf-select id="file" name="file" ng-model="file">Select</div>
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="projectURL">Enter Project URL: </label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" id="projectURL" name="projectURL" ng-model="project_url" />
+                </div>
             </div>
-        </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="linkedinURL">Enter Linkedin URL: </label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" id="linkedinURL" name="linkedinURL" ng-model="linkedin_url" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="githubURL">Enter Github URL: </label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" id="githubURL" name="githubURL" ng-model="github_url" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="file">Select Image: </label>
+                <div class="col-sm-9 align-left">
+                    <div class="btn btn-default" ngf-select id="file" name="file" ng-model="file">Select</div>
+                </div>
+            </div>
 
-        <div class="form-group">
-            <button class="btn btn-default" ng-click="saveStudent()">Submit</button>
-        </div>
+            <div class="form-group">
+                <button class="btn btn-default" ng-click="saveStudent()">Submit</button>
+            </div>
+        </form>
+    </div>
 
-        </div>
-    </form>
-</div>
+
+    <!--<select class="ui fluid search dropdown" multiple="">-->
+        <!--<option value="">State</option>-->
+        <!--<option value="AL">Alabama</option>-->
+        <!--<option value="AK">Alaska</option>-->
+        <!--<option value="AZ">Arizona</option>-->
+        <!--<option value="AR">Arkansas</option>-->
+        <!--<option value="CA">California</option>-->
+        <!--<option value="CO">Colorado</option>-->
+        <!--<option value="CT">Connecticut</option>-->
+        <!--<option value="DE">Delaware</option>-->
+        <!--<option value="DC">District Of Columbia</option>-->
+        <!--<option value="FL">Florida</option>-->
+        <!--<option value="GA">Georgia</option>-->
+        <!--<option value="HI">Hawaii</option>-->
+        <!--<option value="ID">Idaho</option>-->
+        <!--<option value="IL">Illinois</option>-->
+        <!--<option value="IN">Indiana</option>-->
+        <!--<option value="IA">Iowa</option>-->
+        <!--<option value="KS">Kansas</option>-->
+        <!--<option value="KY">Kentucky</option>-->
+        <!--<option value="LA">Louisiana</option>-->
+        <!--<option value="ME">Maine</option>-->
+        <!--<option value="MD">Maryland</option>-->
+        <!--<option value="MA">Massachusetts</option>-->
+        <!--<option value="MI">Michigan</option>-->
+        <!--<option value="MN">Minnesota</option>-->
+        <!--<option value="MS">Mississippi</option>-->
+        <!--<option value="MO">Missouri</option>-->
+        <!--<option value="MT">Montana</option>-->
+        <!--<option value="NE">Nebraska</option>-->
+        <!--<option value="NV">Nevada</option>-->
+        <!--<option value="NH">New Hampshire</option>-->
+        <!--<option value="NJ">New Jersey</option>-->
+        <!--<option value="NM">New Mexico</option>-->
+        <!--<option value="NY">New York</option>-->
+        <!--<option value="NC">North Carolina</option>-->
+        <!--<option value="ND">North Dakota</option>-->
+        <!--<option value="OH">Ohio</option>-->
+        <!--<option value="OK">Oklahoma</option>-->
+        <!--<option value="OR">Oregon</option>-->
+        <!--<option value="PA">Pennsylvania</option>-->
+        <!--<option value="RI">Rhode Island</option>-->
+        <!--<option value="SC">South Carolina</option>-->
+        <!--<option value="SD">South Dakota</option>-->
+        <!--<option value="TN">Tennessee</option>-->
+        <!--<option value="TX">Texas</option>-->
+        <!--<option value="UT">Utah</option>-->
+        <!--<option value="VT">Vermont</option>-->
+        <!--<option value="VA">Virginia</option>-->
+        <!--<option value="WA">Washington</option>-->
+        <!--<option value="WV">West Virginia</option>-->
+        <!--<option value="WI">Wisconsin</option>-->
+        <!--<option value="WY">Wyoming</option>-->
+    <!--</select>-->

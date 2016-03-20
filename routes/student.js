@@ -81,16 +81,10 @@ var storage =   multer.diskStorage({
         callback(null, file.fieldname + '-' + Date.now() + file.originalname.substring(file.originalname.indexOf('.')));
     }
 });
-var upload = multer({ storage : storage}).single('file');
+var upload = multer({ storage : storage});
 
 // post info to the database
-router.post('/', function(req, res) {
-    upload(req, res, function(err) {
-        if(err) {
-            console.log(err);
-        }
-        console.log(req.file);
-        //console.log(req.body);
+router.post('/', upload.single('file'), function(req, res) {
         var addedStudent = new Student({
             "first_name": req.body.firstName,
             "last_name": req.body.lastName,
@@ -118,9 +112,6 @@ router.post('/', function(req, res) {
         });
     });
 
-
-
-});
 
 // updates the database
 router.put('/:id', function(req, res){
